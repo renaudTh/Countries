@@ -1,8 +1,37 @@
-<div *ngFor="let country of countries" class="country">
-    <h3>{{country.name}}</h3>
-    <ul>
-        <li><img [src]="country.flagUrl" alt="" srcset=""></li>
-        <li>Capital: {{country.capital}}</li>
-        <li>Region: {{country.region}}</li>
-    </ul>
+
+<header>
+    <h1>Where in the world ?</h1>
+</header>
+<div class="container">
+
+
+    <div class="form-container">
+        <form>
+            <input type="search" name="searchBar" id="searchBar">
+            <input type="submit" value="search">
+        </form>
+
+        <form>
+            <select name="filterCountry" id="filterCountry">
+                <option value="Region1">Region1</option>
+                <option value="Region2">Region2</option>
+                <option value="Region3">Region3</option>
+                <option value="Region4">Region4</option>
+            </select>
+        </form>
+    </div>
+    <div class="countries">
+        <div *ngFor="let country of countries" class="country">
+            <img class="flag" [src]="country.flagUrl" [alt]="country.name+' flag'" srcset="">
+            <div class="infos">
+                <h3>{{country.name}}</h3>
+                <ul>
+                    <li>Capital : {{country.capital}}</li>
+                    <li>Region : {{country.region}}</li>
+                    <li>Population : {{country.population}}</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
 </div>
