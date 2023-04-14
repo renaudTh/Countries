@@ -19,7 +19,7 @@ export class CountriesAPIService {
       capital: elt.capital,
       region: elt.region,
       flagUrl: elt.flags.png,
-      population: elt.population
+      population: elt.population.toLocaleString("en-US")
     })
   }
 
