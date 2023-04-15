@@ -3,8 +3,6 @@
     <h1>Where in the world ?</h1>
 </header>
 <div class="container">
-
-
     <div class="form-container">
         <form>
             <input type="search" name="searchBar" id="searchBar">
@@ -20,18 +18,6 @@
             </select>
         </form>
     </div>
-    <div class="countries">
-        <div *ngFor="let country of countries" class="country">
-            <img class="flag" [src]="country.flagUrl" [alt]="country.name+' flag'" srcset="">
-            <div class="infos">
-                <h3>{{country.name}}</h3>
-                <ul>
-                    <li><span class="key">Population</span> : {{country.population}}</li>
-                    <li><span class="key">Region</span> : {{country.region}}</li>
-                    <li><span class="key">Capital</span> : {{country.capital}}</li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
+    <app-countries></app-countries>
+  
 </div>
