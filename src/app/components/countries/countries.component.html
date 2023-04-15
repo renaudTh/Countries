@@ -1,14 +1,3 @@
 <div class="countries">
-    <div *ngFor="let country of countries" class="country">
-        <img class="flag" [src]="country.flagUrl" [alt]="country.name+' flag'" srcset="">
-        <div class="infos">
-            <h3>{{country.name}}</h3>
-            <ul>
-                <li><span class="key">Population</span> : {{country.population}}</li>
-                <li><span class="key">Region</span> : {{country.region}}</li>
-                <li><span class="key">Capital</span> : {{country.capital}}</li>
-            </ul>
-        </div>
-
-    </div>
+<app-country-item *ngFor="let currentCountry of countries" [country]="currentCountry"></app-country-item>
 </div>

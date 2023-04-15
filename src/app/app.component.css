@@ -8,8 +8,6 @@ header{
     height: 80px;
     background-color: white;
 }
-
-
 .form-container{
     display:flex;
     justify-content: space-between;
